@@ -15,7 +15,9 @@ import java.net.Socket;
 public class Servidor {
     public static void main(String[] args) {
         try {
-            ServerSocket servidor = new ServerSocket(5000);
+            int puerto = 5000;
+
+            ServerSocket servidor = new ServerSocket(puerto);
             System.out.println("Puerto: " + servidor.getLocalPort() + " abierto...");
             System.out.println("Conexion establecia...");
             Socket cliente = servidor.accept();

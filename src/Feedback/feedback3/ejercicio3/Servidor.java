@@ -16,12 +16,17 @@ import java.net.Socket;
 
 public class Servidor {
     public static void main(String[] args) {
+
         try {
-            ServerSocket servidor = new ServerSocket(5000);
+            int puerto = 5000;
+
+            ServerSocket servidor = new ServerSocket(puerto);
             System.out.println("Puerto: " + servidor.getLocalPort() + " abierto...");
             System.out.println("Conexion establecia...");
             Socket cliente = servidor.accept();
-            System.out.println("Cliente conectado...");
+            Socket cliente2 = servidor.accept();
+            System.out.println("Cliente1 conectado...");
+            System.out.println("Cliente2 conectado...");
 
             //Leer los datos enviados
             ObjectInputStream objetoEntrada = new ObjectInputStream(cliente.getInputStream());
@@ -30,6 +35,13 @@ public class Servidor {
             System.out.println("objeto recibido:\n" + rectangulo.toString());
             System.out.println("calculando...");
 
+            ObjectInputStream objetoEntrada2 = new ObjectInputStream(cliente2.getInputStream());
+            Rectangulo rectangulo2 = (Rectangulo) objetoEntrada2.readObject();
+            System.out.println("Recibiendo objeto del cliente2...");
+            System.out.println("objeto recibido:\n" + rectangulo2.toString());
+            System.out.println("calculando...");
+
+
 
             //Escribir respuesta al cliente
             rectangulo.setArea(500.0);
@@ -37,6 +49,12 @@ public class Servidor {
             ObjectOutputStream objetoSalida = new ObjectOutputStream(cliente.getOutputStream());
             objetoSalida.writeObject(rectangulo);
             System.out.println("Mandando mensaje al cliente...");
+            rectangulo2.setArea(5000.0);
+            rectangulo2.setPerimetro(2000.0);
+            ObjectOutputStream objetoSalida2 = new ObjectOutputStream(cliente2.getOutputStream());
+            objetoSalida.writeObject(rectangulo2);
+            System.out.println("Mandando mensaje al cliente2...");
+
 
 
             //se cierra el recursos

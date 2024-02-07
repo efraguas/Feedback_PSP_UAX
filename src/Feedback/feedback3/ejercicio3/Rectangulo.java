@@ -17,8 +17,8 @@ public class Rectangulo implements Serializable {
 
     /**
      * Constructor de la clase Rectángulo
-     * @param area
-     * @param perimetro
+     * @param area, el area del rectángulo.
+     * @param perimetro, el perimetro del rectángulo.
      */
     public Rectangulo(double area, double perimetro) {
         this.area = 0.0;

@@ -6,8 +6,10 @@ import java.net.Socket;
 public class Cliente {
     public static void main(String[] args) {
         try {
-            Socket cliente;
-            cliente = new Socket("127.0.0.1", 5000);
+            int puerto = 5000;
+            String host = "127.0.0.1";
+
+            Socket cliente = new Socket(host, puerto);
             System.out.println("Programa Cliente conectado...");
 
             //Escribir mensaje al servidor
@@ -30,5 +32,7 @@ public class Cliente {
             e.printStackTrace();
         }
 
+
     }
 }
+

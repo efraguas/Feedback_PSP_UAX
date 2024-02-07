@@ -1,13 +1,20 @@
 package Feedback.feedback3.ejercicio3;
 
 import java.io.*;
+import java.net.InetAddress;
 import java.net.Socket;
 
 public class Cliente {
     public static void main(String[] args) {
+
+        int puerto = 5000;
+        String host = "127.0.0.1";
+
         try {
             Socket cliente;
-            cliente = new Socket("127.0.0.1", 5000);
+            cliente = new Socket(host, puerto);
+            InetAddress address = cliente.getInetAddress();
+
             System.out.println("Programa Cliente conectado...");
 
             //Escribir mensaje al servidor
