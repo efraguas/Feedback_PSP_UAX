@@ -13,8 +13,6 @@ public class Cliente {
         try {
             Socket cliente;
             cliente = new Socket(host, puerto);
-            InetAddress address = cliente.getInetAddress();
-
             System.out.println("Programa Cliente conectado...");
 
             //Escribir mensaje al servidor

@@ -7,5 +7,28 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="commons-net-3.10.0" level="project" />
+    <orderEntry type="library" exported="" name="commons-net-3.10.0-sources" level="project" />
+    <orderEntry type="library" exported="" name="commons-net-3.10" level="project" />
+    <orderEntry type="library" exported="" name="commons-net-3.10.01" level="project" />
+    <orderEntry type="library" exported="" name="commons-net-examples-3.10.0" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/commons-net-3.10.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/OneDrive/Documentos/Eric/CFGS_DAM/2ºDAM/Programacion de Servicios y Procesos/Recursos/commons-net-3.10.0-bin/commons-net-3.10.0/commons-net-3.10.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
