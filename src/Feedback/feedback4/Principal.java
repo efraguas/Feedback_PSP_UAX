@@ -23,7 +23,7 @@ public class Principal {
         cliente.connect(hostname,21);
         System.out.println("Programa Cliente conectado...");
         System.out.println("Introduzca Usuario y password:");
-        //imprimir mensahje de respuesta del servidor"
+        //imprimir mensaje de respuesta del servidor"
         System.out.println(cliente.getReplyString());
         //imprimir el codigo devuelto por el cliente FTP
         System.out.println(cliente.getReplyCode());
