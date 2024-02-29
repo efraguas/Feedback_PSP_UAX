@@ -26,6 +26,8 @@ public class Cliente {
             //Se cierra el recursos
             salida.close();
             flujoSalida.close();
+            entrada.close();
+            datosEntrada.close();
             cliente.close();
         } catch (IOException e) {
             System.out.println("Fallo en la conoxion con el servidor");
